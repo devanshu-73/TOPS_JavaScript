@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p id="Para"></p>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <p id="para3"></p>
+    <p id="para4"></p>
+    <p id="para5"></p>
+    <p id="myElement"></p>
     <script>
-        // Arithmatic
-        // +,-,*,/,%
-        document.write("This is New Paragraph");
-        let a=20;
-        let b=10;
+        //-------------------------------- Arithmatic -------------------------------------------
+        //------------------------------(   +,-,*,/,%   )----------------------------------
+        // document.write("This is New Paragraph");
+        let a = 20;
+        let b = 10;
         // Addition
-        // let c = a+b;
+        let add = a + b;
         // Subtraction
-        // let c = a-b;
+        let sub = a - b;
         // Multiplication
-        // let c = a*b;
+        let mul = a * b;
         // Division
-        // let c = a/b;
+        let div = a / b;
         //modulo
-        // let c = a%b;
-        console.log(a+b);
-        console.log(a-b);
-        console.log(a*b);
-        console.log(a/b);
-        console.log(a%b);
+        let modulo = a % b;
+        // console.log(a+b);
+        // console.log(a-b);
+        // console.log(a*b);
+        // console.log(a/b);
+        // console.log(a%b);
         // document.write(a+b);
-        // document.getElementById('para').innerHTML=+c;
-        // document.getElementById('para').innerHTML=innerHTML+c;
-        // document.getElementById('para').innerHTML=c;
+        //----------------------- three ways to write in inner html ------------------------------------
+        // document.getElementById('para1').innerHTML=+c;
+        // document.getElementById('para1').innerHTML=innerHTML+c;
+        // document.getElementById('para1').innerHTML=c;
+        document.getElementById('para1').innerHTML = +add;
+        document.getElementById('para2').innerHTML = +sub;
+        document.getElementById('para3').innerHTML = +mul;
+        document.getElementById('para4').innerHTML = +div;
+        document.getElementById('para5').innerHTML = +modulo;
+
+        // let myString = "Hello, World!";
+        // let element = document.getElementById("myElement");
+        // element.innerHTML = myString;
+        let a1 = 20;
+        let b1 = 10;
+        let addition = a1 + b1;
+        document.getElementById("myElement").innerHTML = innerHTML+addition;
+
     </script>
 </body>
+
 </html>

@@ -1,22 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script>
-        let a=20;
-        let b=10;
 
-        if (a>b) {
-            document.write('A is Bigger');
+<body>
+    <h1 id="day"></h1>
+    <script>
+        let a = 20;
+        let b = 10;
+        // if (a>b) {
+        //     document.write('A is Bigger');
+        // }
+        // else {
+        //     document.write('B is Bigger');
+        // }
+
+        // if (a>b) {
+        //     document.write('A is Bigger');
+        // }
+        // else if(a<b) {
+        //     document.write('B is Bigger');
+        // }
+        // else {
+        //     document.write('cjje jcj');
+        // }
+
+
+
+        //-------------- switch case in JavaScript ----------------------------------
+        let day;
+        switch (new Date().getDay()) {
+            case 1:
+                day = "mon";
+                break;
+            case 2:
+                day = "tue";
+                break;
+            case 3:
+                day = "wed";
+                break;
+            case 4:
+                day = "thu";
+                break;
+            case 5:
+                day = "fri";
+                break;
+            case 6:
+                day = "sat";
+                break;
+            case 7:
+                day = "sun";
+                break;
+
+            default:
+                break;
         }
-        else {
-            document.write('B is Bigger');
-        }
+        document.getElementById('day').innerHTML = "Today is " + day;
     </script>
 </body>
+
 </html>
