@@ -16,45 +16,41 @@
     <p id="para5"></p>
     <p id="myElement"></p>
     <script>
-        //-------------------------------- Arithmatic -------------------------------------------
+        //-------------------------------- Arithmatic Operator -------------------------------------------
         //------------------------------(   +,-,*,/,%   )----------------------------------
         // document.write("This is New Paragraph");
         let a = 20;
         let b = 10;
-        // Addition
-        let add = a + b;
-        // Subtraction
-        let sub = a - b;
-        // Multiplication
-        let mul = a * b;
-        // Division
-        let div = a / b;
-        //modulo
-        let modulo = a % b;
+        let add = a + b;// Addition
+        let sub = a - b;// Subtraction
+        let mul = a * b;// Multiplication
+        let div = a / b;// Division
+        let modulo = a % b;//modulo
         // console.log(a+b);
         // console.log(a-b);
         // console.log(a*b);
         // console.log(a/b);
         // console.log(a%b);
-        // document.write(a+b);
-        //----------------------- three ways to write in inner html ------------------------------------
-        // document.getElementById('para1').innerHTML=+c;
-        // document.getElementById('para1').innerHTML=innerHTML+c;
-        // document.getElementById('para1').innerHTML=c;
-        document.getElementById('para1').innerHTML = +add;
-        document.getElementById('para2').innerHTML = +sub;
-        document.getElementById('para3').innerHTML = +mul;
-        document.getElementById('para4').innerHTML = +div;
-        document.getElementById('para5').innerHTML = +modulo;
-
+        // document.getElementById('para1').innerHTML = add;
+        // document.getElementById('para2').innerHTML = sub;
+        // document.getElementById('para3').innerHTML = mul;
+        // document.getElementById('para4').innerHTML = div;
+        // document.getElementById('para5').innerHTML = modulo;        
+        // -------------------------------------------------------------------------------------------------------------------------
         // let myString = "Hello, World!";
         // let element = document.getElementById("myElement");
         // element.innerHTML = myString;
         let a1 = 20;
         let b1 = 10;
         let addition = a1 + b1;
-        document.getElementById("myElement").innerHTML = innerHTML+addition;
+        document.getElementById("myElement").innerHTML = addition;
 
+
+        //-------------------------------- Assignment Operator -------------------------------------------
+        let temp1 = 1;
+        temp1=+5; //same as temp1=temp1+5;
+        console.log(temp1);
+        // document.write(temp1);
     </script>
 </body>
 
