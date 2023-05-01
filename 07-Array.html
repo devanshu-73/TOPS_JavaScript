@@ -12,13 +12,15 @@
     <p id="array1"></p>
     <p id="array2"></p>
     <p id="array3"></p>
+    <button onclick="btn_car()">Add Car</button>
+    <p id="btn"></p>
     <script>
         // Method - 1
-        let array1 = ['Tirth', 'Jay', 'Devanshu'];
-        let array2 = [42, 12, 3];
-        document.getElementById('array1').innerHTML = array1[2]+'  ------   '+array2[2];
-        document.getElementById('array2').innerHTML = array1[1]+'  ------   '+array2[0];
-        document.getElementById('array3').innerHTML = array1[0]+'  ------   '+array2[1];
+        // let array1 = ['Tirth', 'Jay', 'Devanshu'];
+        // let array2 = [42, 12, 3];
+        // document.getElementById('array1').innerHTML = array1[2]+'  ------   '+array2[2];
+        // document.getElementById('array2').innerHTML = array1[1]+'  ------   '+array2[0];
+        // document.getElementById('array3').innerHTML = array1[0]+'  ------   '+array2[1];
 
         // Method - 2
         // let xyz = []
@@ -31,6 +33,13 @@
         // let array3 = new Array("Jay", "Tirth", "Devanshu")
         // document.getElementById('array').innerHTML = array3;
         // document.getElementById('array').innerHTML = array3[1];
+        var car = ["car-1","car-2"];
+        document.getElementById('btn').innerHTML=car;
+        function btn_car()
+        {
+            car.push("car-3");
+            document.getElementById('btn').innerHTML=car;
+        }
     </script>
 </body>
 
