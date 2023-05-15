@@ -19,9 +19,13 @@
       "default",
       {
         "ignore": [
-          "width: max-content"
+          "width: max-content",
+          "display: grid",
+          "grid-template-columns",
+          "grid-template-columns: repeat(4, auto)"
         ]
       }
-    ]
+    ],
+    "sri": "off"
   }
 }

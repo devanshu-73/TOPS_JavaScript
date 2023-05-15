@@ -9,7 +9,7 @@
 <body>
     <!-- <button onclick="fun()">click</button> -->
     <p id="one"></p>
-    <!-- <button id="btn"></button> -->
+    <button id="btn"></button>
     <script>
     //     let count=0;
     //     document.getElementById('one').innerHTML=count;
@@ -20,15 +20,15 @@
     //     }
     //  }
 
-    // let countstart = setInterval(increment);
-    // let start = 0;
+    let countstart = setInterval(increment);
+    let start = 0;
 
-    // function increment() {
-    //     var count = document.getElementById('one').innerHTML = ++start;
-    //     if (start == 1000) {
-        //         clearInterval(countstart);
-        //     }
-        // }
+    function increment() {
+        var count = document.getElementById('one').innerHTML = ++start;
+        if (start == 1000) {
+                clearInterval(countstart);
+            }
+        }
         
     </script>
 </body>

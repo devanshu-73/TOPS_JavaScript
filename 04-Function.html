@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        button{
+        button {
             border: none;
             padding: 2rem;
             color: white;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-size: large;
-            background-color:rgba(34, 139, 34);
+            background-color: rgba(34, 139, 34);
             border-radius: .7rem;
         }
     </style>
 </head>
+
 <body>
     <button onclick="fun()">Click Me To Call Function</button>
+    <p id="para"></p>
     <script>
         // Function Declaring
         function fun() {
@@ -27,7 +30,11 @@
         }
         // Function calling
         // fun();
-    
+        function fun2(fname,lname) {
+            document.getElementById('para').innerHTML = fname + lname;
+        }
+        fun2("Devanshu","Chauhan");
     </script>
 </body>
+
 </html>

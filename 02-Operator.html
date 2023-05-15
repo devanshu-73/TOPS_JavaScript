@@ -9,23 +9,29 @@
 </head>
 
 <body>
-    <p id="para1"></p>
+    <!-- <p id="para1"></p>
     <p id="para2"></p>
     <p id="para3"></p>
     <p id="para4"></p>
     <p id="para5"></p>
-    <div id="myElement"></div>
+    <div id="myElement"></div> -->
+    <p id="ass1"></p>
+    <p id="ass2"></p>
+    <p id="ass3"></p>
+    <p id="ass4"></p>
+    <p id="ass5"></p>
+    <p id="boolean"></p>
     <script>
         //-------------------------------- Arithmatic Operator -------------------------------------------
         //------------------------------(   +,-,*,/,%   )----------------------------------
         // document.write("This is New Paragraph");
-        let a = 20;
-        let b = 10;
-        let add = a + b;// Addition
-        let sub = a - b;// Subtraction
-        let mul = a * b;// Multiplication
-        let div = a / b;// Division
-        let modulo = a % b;//modulo
+        // let a = 20;
+        // let b = 10;
+        // let add = a + b;// Addition
+        // let sub = a - b;// Subtraction
+        // let mul = a * b;// Multiplication
+        // let div = a / b;// Division
+        // let modulo = a % b;//modulo
         // console.log(a+b);
         // console.log(a-b);
         // console.log(a*b);
@@ -40,14 +46,46 @@
         // let myString = "Hello, World! _____ I Am Here......";
         // let element = document.getElementById("myElement");
         // element.innerHTML = myString;
-            
-        document.getElementById('myElement').innerHTML="Hello, World! _____ I Am Here......";
-        
+
+        // document.getElementById('myElement').innerHTML="Hello, World! _____ I Am Here......";
+
         // -------------------------------------------------------------------------------------------------------------------------
         // let a1 = 20;
         // let b1 = 10;
         // let addition = a1 + b1;
         // document.getElementById("myElement").innerHTML ="20 + 10 = "+ addition;
+
+
+
+        // Assignment Operators
+        // let a = 5;
+        // a += 3;
+        // document.getElementById('ass1').innerHTML = a;
+        // let b = 5;
+        // b -= 2;
+        // document.getElementById('ass2').innerHTML = b;
+        // let c = 5;
+        // c *= 3;
+        // document.getElementById('ass3').innerHTML = c;
+        // let d = 5;
+        // d /= 1;
+        // document.getElementById('ass4').innerHTML = d;
+        // let e = 5;
+        // e %= 4;
+        // document.getElementById('ass5').innerHTML = e;
+
+
+        // Logical Operators = && , || , !
+
+        let a = 30;
+        let b = 20;
+        console.log(a<b && a>b);
+        console.log(a<b || a>b);
+        console.log(!(a<b && a>b));
+
+
+         // Boolean Operators
+         document.getElementById('boolean').innerHTML=Boolean(10<20);
     </script>
 </body>
 
