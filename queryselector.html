@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            transition: all .5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <!-- <select name="" id="" onchange="a(this.value)">
+        <option value="" selected disabled>Select</option>
+        <option value="blue">blue</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+    </select>
+    <script>
+        let box = document.querySelector("div");
+        function a(color) {
+            box.style.background = color;
+        }
+    </script> -->
+    <!-- ------------------------------------------------------- -->
+<br>
+    <input type="text" name="" id="">
+    <script>
+        let box = document.querySelector("div"),
+        input = document.querySelector("input");
+        input.addEventListener("input",() => {
+            box.style.borderRadius = input.value;
+            box.style.backgroundColor = input.value;
+        })
+    </script>
+
+</body>
+
+</html>
