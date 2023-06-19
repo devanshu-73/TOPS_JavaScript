@@ -9,9 +9,13 @@
 </head>
 
 <body>
+    <div></div>
+    <div class="para1"></div>
     <script>
-        document.write("This code can write in innerHtml....");
-        console.log("This code can write in console");
+        document.getElementsByTagName('div')[0].innerHTML+="By TagName..";
+        document.getElementsByClassName('para1')[0].innerHTML+="By ClassName...";
+        document.write("This Syntax can write in innerHtml....");
+        console.log("This Syntax can write in console");
 
         // ------------------ Javascript Variables -----------------------
         // ----------------------------------------------------------------------------------------

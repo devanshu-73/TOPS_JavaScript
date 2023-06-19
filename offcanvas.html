@@ -84,33 +84,44 @@
             border: 2px solid white;
             border-radius: .2rem;
         }
-
+        
         #hamburger-menu hr {
             border-radius: 1rem;
             height: .1rem;
             background-color: white;
             margin: .2rem 0rem;
         }
-
+        
         #hamburger-menu:hover {
             background-color: rgb(187, 124, 124);
         }
-        .nav-hm{
+        
+        .nav-hm {
             display: flex;
             justify-content: space-around;
             align-items: center;
         }
-        .nav-hm nav{
-        width: 100%;
+        
+        .nav-hm nav {
+            width: 100%;
         }
-        #offcanvas {
-            width: 20rem;
-            background-color: red;
+        
+        .offcanvas {
+            width: 50rem;
+            background-color: lightblue;
             height: auto;
-            display: none;
+            /* display: none; */
+            visibility: hidden;
             position: absolute;
+            transition: 2s ease;
+            top: -100%;
+            /* right: -100%; */
+
+        }
+        .offcanvas-vis{
+            /* display: block; */
+            visibility: visible;
             top: 5%;
-            right: 0%;
         }
     </style>
 </head>
@@ -144,7 +155,7 @@
                     </button>
 
                 </nav>
-                <div id="offcanvas">
+                <div class="offcanvas" id="offcanvas">
                     <h1>Dev</h1>
                     <div>grfdvrev</div>
                     <div>grfdvrev</div>
@@ -155,7 +166,19 @@
             </div>
         </div>
     </div>
-    <script src="/offcanvas.js"></script>
+    <script>
+        function offcanvas() {
+            var x = document.getElementById("offcanvas");
+            x.classList.toggle("offcanvas-vis");
+            // if (x.style.display === "block") {
+            //     x.style.display = "none";
+            // } else {
+            //     x.style.display = "block";
+            // }
+        }
+
+    </script>
+    <!-- <script src="/offcanvas.js"></script> -->
 </body>
 
 </html>
