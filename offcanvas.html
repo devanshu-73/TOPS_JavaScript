@@ -84,28 +84,29 @@
             border: 2px solid white;
             border-radius: .2rem;
         }
-        
+
         #hamburger-menu hr {
             border-radius: 1rem;
             height: .1rem;
             background-color: white;
             margin: .2rem 0rem;
         }
-        
+
         #hamburger-menu:hover {
             background-color: rgb(187, 124, 124);
         }
-        
+
         .nav-hm {
+            position: relative;
             display: flex;
             justify-content: space-around;
             align-items: center;
         }
-        
+
         .nav-hm nav {
             width: 100%;
         }
-        
+
         .offcanvas {
             width: 50rem;
             background-color: lightblue;
@@ -113,15 +114,16 @@
             /* display: none; */
             visibility: hidden;
             position: absolute;
-            transition: 2s ease;
-            top: -100%;
+            transition:all 1s ease;
+            top: -500%;
             /* right: -100%; */
 
         }
-        .offcanvas-vis{
+
+        .offcanvas-vis {
             /* display: block; */
             visibility: visible;
-            top: 5%;
+            top: 100%;
         }
     </style>
 </head>
