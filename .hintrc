@@ -27,6 +27,7 @@
         ]
       }
     ],
-    "sri": "off"
+    "sri": "off",
+    "no-inline-styles": "off"
   }
 }
