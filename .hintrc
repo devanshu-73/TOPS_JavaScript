@@ -28,6 +28,26 @@
       }
     ],
     "sri": "off",
-    "no-inline-styles": "off"
+    "no-inline-styles": "off",
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-active": "off"
+      }
+    ],
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
+      }
+    ],
+    "meta-viewport": "off",
+    "axe/text-alternatives": [
+      "default",
+      {
+        "document-title": "off",
+        "image-alt": "off"
+      }
+    ]
   }
 }

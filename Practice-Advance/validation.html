@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script>
+
+
+function validate()  
+{
+	var ufn=document.getElementById("ufn").value;
+	if(ufn=="" || ufn==null)
+	{
+		alert('unf field is required');
+		return false;
+	}
+	
+	var un=document.forms['myform']['un'].value;
+	if(un=="" || un==null)
+	{
+		document.getElementById("un").innerHTML="un field is required";
+		return false;
+	}
+	else
+	{
+		document.getElementById("un").innerHTML="";
+	}
+}
+
+
+</script>
+</head>
+
+<body>
+                                      
+<form name="myform" action="" method="post" onsubmit="return validate()">
+			<table border="2" align="center" >
+            	<tr>
+                	<th> Registration Page </th>
+                </tr>
+                <tr>
+            		<th>User Fist Name:-</th>
+                    <td><input type="text" id="ufn" name="ufn" ></td>
+                </tr>
+   
+                <tr>
+            		<th>User Name:-</th>
+                    <td>
+						<input type="text" name="un">
+						<span style="color:red" id="un" ></span>
+					</td>
+                </tr>
+               
+                <tr>
+                	<td><input type="submit" name="submit"/></td>
+                    
+                </tr>
+                 	
+            	
+            </table>
+                
+        </form>
+
+<br><br>
+<hr>
+
+
+<script>
+function validate1(argu)  
+{
+	
+	if(argu.username.value=="")
+	{
+		document.getElementById("msg").innerHTML="username field is required";
+		argu.username.focus();
+		return false;
+	}
+	if(argu.password.value=="")
+	{
+		document.getElementById("msg").innerHTML="password field is required";
+		argu.password.focus();
+		return false;
+	}
+}
+
+</script>
+
+
+        <h4 align="center" style="color:red" id="msg"></h4>                            
+		<form  name="myform2" action="" method="post" onsubmit="return validate1(this)">
+			<table border="2" align="center" >
+            	<tr>
+                	<th> Registration Page </th>
+                </tr>
+                <tr>
+            		<th>User Name:-</th>
+                    <td>
+						<input type="text" id="username" name="username" >
+					</td>
+                </tr>
+   
+                <tr>
+            		<th>password:-</th>
+                    <td>
+						<input type="text" name="pass" id="password">
+					</td>
+                </tr>
+               
+                <tr>
+                	<td><input type="submit" name="submit"/></td>
+                    
+                </tr>
+                 	
+            	
+            </table>
+                
+        </form>
+
+
+
+
+</body>
+</html>
