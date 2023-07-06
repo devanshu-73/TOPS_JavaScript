@@ -1,0 +1,51 @@
+<script>
+    // Date........
+    let date = new Date();
+    date.toLocaleDateString();
+    date.toLocaleTimeString();
+    date.toLocaleString();
+    date.toDateString();
+
+    // advanced.......
+    date.toISOString();
+    date.toJSON();
+
+
+
+
+    // time.....
+    let time = new Date();
+    // setHours() Get the hour (0-23)
+    // setMinutes() 	Get the minute (0-59)
+    // setSeconds() Get the second (0-59)
+
+    time.setDate();
+    time.setFullYear();
+    time.setHours();
+    time.setMinutes();
+
+
+    // Advanced Function
+    // 1 . Simple function.....
+    function sum(a, b) {
+        return a + b;
+    }
+    sum(5, 6);
+
+    // 2 . Literal function.....
+
+    const sum = function (a, b) {
+        return a + b;
+    }
+    sum(5, 6);
+
+    // 3 . Arrow function.....
+    
+    const sum = (a, b) => { return a + b };
+    sum(5, 6);
+    
+    // 4 . void function.....
+    <a href = "" onclick ="javascript:void()"/>
+    // below line doesn't refresh the page
+    // <a href = "javascript:void(0);" onclick =""/>
+</script>
