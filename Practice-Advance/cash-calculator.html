@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #inner {
+            width: 20%;
+        }
+
+        .box {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .result {
+            width: 7rem;
+            height: 1rem;
+        }
+
+        .bdr {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="inner">
+            <div id="box-1" class="box">
+                <div><img src="" alt=""></div>
+                <div><input type="number" name="number" id="number1" min="0" placeholder="Enter Amount "
+                        onkeyup="result1()">
+                </div>
+                <div id="result-1" class="bdr result"></div>
+            </div>
+            <div id="box-2" class="box">
+                <div><img src="" alt=""></div>
+                <div><input type="number" name="number" id="number2" min="0" placeholder="Enter Amount "
+                        onkeyup="result2()">
+                </div>
+                <div id="result-2" class="bdr result"></div>
+            </div>
+            <div id="box-3" class="box">
+                <div><img src="" alt=""></div>
+                <div><input type="number" name="number" id="number3" min="0" placeholder="Enter Amount "
+                        onkeyup="result3()">
+                </div>
+                <div id="result-3" class="bdr result"></div>
+            </div>
+            <div id="box-4" class="box">
+                <div><img src="" alt=""></div>
+                <div><input type="number" name="number" id="number4" min="0" placeholder="Enter Amount "
+                        onkeyup="result4()">
+                </div>
+                <div id="result-4" class="bdr result"></div>
+            </div>
+            <div id="box-5" class="box">
+                <div><img src="" alt=""></div>
+                <div><input type="number" name="number" id="number5" min="0" placeholder="Enter Amount "
+                        onkeyup="result5()">
+                </div>
+                <div id="result-5" class="bdr result"></div>
+            </div>
+            <div id="box-6" class="box">
+                <div><img src="" alt=""></div>
+                <div><input type="number" name="number" id="number6" min="0" placeholder="Enter Amount "
+                        onkeyup="result6()">
+                </div>
+                <div id="result-6" class="bdr result"></div>
+            </div>
+            <div id="box-7" class="box">
+                <div><img src="" alt=""></div>
+                <div><input type="number" name="number" id="number7" min="0" placeholder="Enter Amount "
+                        onkeyup="result7()">
+                </div>
+                <div id="result-7" class="bdr result"></div>
+            </div>
+            <div id="box-8" class="box">
+                <div><img src="" alt=""></div>
+                <div><input type="number" name="number" id="number8" min="0" placeholder="Enter Amount "
+                        onkeyup="result8()">
+                </div>
+                <div id="result-8" class="bdr result"></div>
+            </div>
+            <div id="box-9" class="box">
+                <div><img src="" alt=""></div>
+                <div><input type="number" name="number" id="number9" min="0" placeholder="Enter Amount "
+                        onkeyup="result9()">
+                </div>
+                <div id="result-9" class="bdr result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let result1 = () => {
+            let number1 = document.getElementById('number1').value;
+            let result_2000 = document.getElementById('result-1').innerHTML = number1 * 2000;
+            return result_2000;
+        }
+        let result2 = () => {
+            let number2 = document.getElementById('number2').value;
+            let result_1000 = document.getElementById('result-2').innerHTML = number2 * 1000;
+            return result_1000;
+        }
+        let result3 = () => {
+            let number3 = document.getElementById('number3').value;
+            let result_500 = document.getElementById('result-3').innerHTML = number3 * 500;
+            return result_500;
+        }
+        let result4 = () => {
+            let number4 = document.getElementById('number4').value;
+            let result_200 = document.getElementById('result-4').innerHTML = number4 * 200;
+            return result_200;
+        }
+        let result5 = () => {
+            let number5 = document.getElementById('number5').value;
+            let result_100 = document.getElementById('result-5').innerHTML = number5 * 100;
+            return result_100;
+        }
+        let result6 = () => {
+            let number6 = document.getElementById('number6').value;
+            let result_50 = document.getElementById('result-6').innerHTML = number6 * 50;
+            return result_50;
+        }
+        let result7 = () => {
+            let number7 = document.getElementById('number7').value;
+            let result_10 = document.getElementById('result-7').innerHTML = number7 * 10;
+            return result_10;
+        }
+        let result8 = () => {
+            let number8 = document.getElementById('number8').value;
+            let result_5 = document.getElementById('result-8').innerHTML = number8 * 5;
+            return result_5;
+        }
+        let result9 = () => {
+            let number9 = document.getElementById('number9').value;
+            let result_1 = document.getElementById('result-9').innerHTML = number9 * 1;
+            return result_1;
+        }
+
+    </script>
+</body>
+
+</html>
