@@ -1,0 +1,155 @@
+<script>
+
+/*
+write("string")	writes the given string on the doucment.
+writeln("string")	writes the given string on the doucment with newline character at the end.
+getElementById()	returns the element having the given id value.
+document.getElementById('mylocation').innerHTML=data;
+document.getElementById('myloca').innerText=msg;  
+
+getElementsByName()	returns all the elements having the given name value.
+getElementsByTagName()	returns all the elements having the given tag name.
+getElementsByClassName()	returns all the elements having the given class name.
+if(document.myForm1.userPass.value.length>5) // document.forms["myform"]["ufn"].value; 
+*/
+
+document.write('Hi hello' + '<br>');
+
+document.writeln('Hi hello' + '<br>'); // not work properly
+</script>
+
+<hr>
+
+
+<p id="innerHTML">Hi raj</p>
+<p id="innerText">Hi rajesh</p>
+<script>
+	document.getElementById('innerHTML').innerHTML="<h1>Hi Rajesh<h1>";  
+	document.getElementById('innerText').innerText="<h1>Hi Rajesh<h1>";  
+</script>
+
+<hr>
+
+
+<script type="text/javascript">  
+function getcube()
+{  
+var number=document.getElementById("number").value;  
+document.getElementById('demo').innerHTML=number; 
+}  
+</script>  
+<form>  
+Enter No:<input type="text" id="number" name="number" value="10"/><br/>  
+<input type="button" value="cube" onclick="getcube()"/>  
+<p id="demo"></p>
+</form>  
+
+<hr>
+
+
+
+<div class="example color">
+  <p>P element in first div with class="example color". Div's index is 0.</p>
+</div>
+
+<div class="example color">
+  <p>P element in second div with class="example color". Div's index is 1.</p>
+</div>
+
+<div class="example color">
+  <p>P element in second div with class="example color". Div's index is 1.</p>
+</div>
+
+<div class="example color">
+  <p>P element in second div with class="example color". Div's index is 1.</p>
+</div>
+
+<p>Click the button to change the background color of the first div element with the classes "example" and "color".</p>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction1()">Try it 1</button>
+<p><strong>Note:</strong> The getElementsByClassName() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementsByClassName("example color");
+  x[0].style.backgroundColor = "red";
+  x[1].style.backgroundColor = "yellow";
+}
+
+function myFunction1() {
+  var x = document.getElementsByClassName("example color");
+  var i;
+  for(i=0;i<x.length;i++)
+  {
+	 x[i].style.backgroundColor = "red";
+  }
+}
+</script>
+
+<hr>
+
+Enter Name:
+<input name="animal" type="text" >
+<button onclick="myFunction3()">Try it</button>
+<p id="demo5"></p>
+
+<script>
+function myFunction3() 
+{
+  var x = document.getElementsByName("animal")[0].value;
+  document.getElementById("demo5").innerHTML = x;
+}
+</script>
+
+
+
+<script type="text/javascript">  
+function countpara(){  
+var totalpara=document.getElementsByTagName("h2");  
+alert("total p tags are: "+totalpara.length);  
+  
+}  
+</script>  
+<h2>Hi hello </h2>
+<h2>Hi hello </h2>
+<button onclick="countpara()">count h2</button>  
+<hr>
+
+
+<script type="text/javascript" >  
+function showcommentform() 
+{  
+var data="Name:<input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='80'></textarea>  <br><input type='submit' value='Post Comment'>";  
+document.getElementById('mylocation').innerHTML=data;  
+}  
+</script>  
+<form name="myForm">  
+<input type="button" value="Button" onclick="showcommentform()">  
+<div id="mylocation"></div>  
+</form>  
+
+<hr>
+
+<form name="myForm1">  
+<input type="password" value="" name="userPass" onkeyup="byformname()">  
+Strength:<span id="myloca">no strength</span>  
+</form>  
+
+<script type="text/javascript" >  
+function byformname() 
+{  
+	var msg;  
+	if(document.myForm1.userPass.value.length>5) // if(document.forms["myform"]["ufn"].value>5)
+	{  
+		document.getElementById('myloca').innerText="Good";
+		document.getElementById('myloca').style.color="green";	
+	}  
+	
+}  
+  
+</script>  
+
+
+
+

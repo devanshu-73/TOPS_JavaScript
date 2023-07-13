@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Function Rest Parameter</h2>
+
+<p>The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:</p>
+
+<p id="demo"></p>
+
+<script>
+
+
+function addAll(...data)
+{
+    for (var i = 0; i<data.length; i++)
+	{    
+		document.write(data[i] + "<br>")
+    }
+
+}
+
+addAll(1, 2, 3, 4, 5,6,7,8); //we can provide inifite numbers as argument
+
+
+//all given argument store in default variable name called (arguments)
+
+function argumentsDefault()
+{
+    for (var i = 0; i<arguments.length;i++)
+	{    
+		document.write(arguments[i] + "<br>")
+    }
+
+}
+
+argumentsDefault(1, 2, 3, 4, 5,6,7,8); //we can provide inifite numbers as argument
+
+
+
+
+
+</script>
+
+</body>
+</html>

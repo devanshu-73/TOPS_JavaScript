@@ -1,0 +1,48 @@
+<!--
+void is an important keyword in JavaScript which can be used as a 
+unary operator that appears before its single operand, 
+which may be of any type. 
+
+This operator specifies an expression to be evaluated without returning a value.
+
+--> 
+ 
+ <!--
+ Here the expression alert ('Warning!!!') is evaluated but it is not loaded back 
+ into the current document −
+ 
+ -->
+ <p><p>Click the following, This won't react at all...</p></p>
+ <a href = "javascript:void(alert('Warning!!!'))">Click me!</a>     
+ 
+ 
+ 
+ <!--
+ 
+ The following link does nothing because the expression "0" has no effect in JavaScript. 
+ Here the expression "0" is evaluated, but it is not loaded back into the current document.
+ 
+ -->
+ 
+<a href = "javascript:void(document.write('hello'))">Click me!</a>      
+
+
+<!--
+We can use the operand 0 in two ways that are void(0) or void 0. Both of the ways work the same. 
+The JavaScript:void(0) tells the browser to "do nothing" i.e., prevents the browser from reloading or refreshing the page. 
+It is useful when we insert links that have some important role on the webpage without any reloading.
+ So, using void(0) on such links prevents the reloading of the page but allows to perform a useful function such as updating a value on the webpage.
+-->
+
+
+<a href ="" >  
+It will do nothing.  
+</a>
+<a href = "javascript:void(0);"  onclick="">  
+It will do nothing.  
+</a>  
+
+
+
+<br>
+<br>

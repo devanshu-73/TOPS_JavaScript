@@ -1,0 +1,144 @@
+<!--
+To create a class inheritance, use the extends keyword.
+
+A class created with a class inheritance inherits all the methods from another class:
+
+Type of inheritance
+
+5 type of Inheritance
+
+Single Inheritance.
+Multi-Level Inheritance.
+Hierarchical Inheritance.
+Multiple Inheritance. // not possible by class keywords
+Hybrid Inheritance.
+
+
+
+-->
+
+<script>
+
+
+//Single Inheritance
+
+class abc
+{
+	sum()
+	{
+		var a=10;
+		var b=20;
+		var sum;
+		sum=a+b;
+		document.write(sum);
+	}
+}
+class xyz extends abc
+{
+	multi()
+	{
+		var a=20;
+		var b=20;
+		var multi;
+		multi=a*b;
+		document.write(multi);
+	}
+	
+}
+const obj= new xyz();
+obj.sum();
+obj.multi();
+
+
+/*
+//Multi level Inheritance
+
+class abc
+{
+	sum()
+	{
+		var a=10;
+		var b=20;
+		var sum;
+		sum=a+b;
+		document.write("<br>sum of a & b are : " + sum);
+	}
+}
+class xyz extends abc
+{
+	multi()
+	{
+		var a=10;
+		var b=20;
+		var multi;
+		multi=a*b;
+		document.write("<br>Multi of a & b are : " + multi);
+	}
+	
+}
+class pqr extends xyz
+{
+	sub()
+	{
+		var a=10;
+		var b=20;
+		var sub;
+		sub=b-a;
+		document.write("<br>Sub of a & b are : " + sub);
+	}
+	
+}
+
+const obj= new pqr();
+obj.sum();
+obj.multi();
+obj.sub();
+*/
+
+
+//Hierarchical level Inheritance
+/*
+class abc
+{
+	sum()
+	{
+		var a=10;
+		var b=20;
+		var sum;
+		sum=a+b;
+		document.write("<br>sum of a & b are : " + sum);
+	}
+}
+class xyz extends abc
+{
+	multi()
+	{
+		var a=10;
+		var b=20;
+		var multi;
+		multi=a*b;
+		document.write("<br>Multi of a & b are : " + multi);
+	}
+	
+}
+class pqr extends abc
+{
+	sub()
+	{
+		var a=10;
+		var b=20;
+		var sub;
+		sub=b-a;
+		document.write("<br>Sub of a & b are : " + sub);
+	}
+	
+}
+
+const obj1= new xyz();
+const obj2= new pqr();
+obj1.sum();
+obj1.multi();
+obj2.sum();
+obj2.sub();
+*/
+</script>

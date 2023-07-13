@@ -1,0 +1,40 @@
+
+<!--
+The term Polymorphism is derived from the word “Polymorph,” where “Poly” means “Many” 
+and “Morph” means “Transforming one form into another“. In Object-Oriented Programming, 
+Polymorphism allows you to perform the same operation in multiple ways. 
+
+It enables you to invoke the same method with different JavaScript objects by passing 
+selected data members.
+
+1) overloading :  use same name of function in diffrent ways in same class (Not work)
+1) overriding :  use same name of function in diffrent ways in parent and child class 
+-->
+
+<script>  
+class A  
+  {  
+     display()  
+    {  
+      document.writeln("A is invoked<br>");  
+    }  
+  }  
+class B extends A  
+  {  
+    display()  
+    {  
+      document.writeln("B is invoked<br>");  
+    }  
+  }
+class C extends B  
+  {  
+    display()  
+    {  
+      document.writeln("C is invoked");  
+    }  
+  }  
+  
+var obj=[new A(), new B(),new C()] 
+ 
+obj.forEach((msg)=>{msg.display();});  
+</script>  

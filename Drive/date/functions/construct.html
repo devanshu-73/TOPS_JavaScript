@@ -1,0 +1,30 @@
+<!--
+The function statement is not the only way to define a new function; 
+you can define your function dynamically using Function() constructor 
+along with the new operator.
+
+Note − Constructor is a terminology from Object Oriented Programming. 
+You may not feel comfortable for the first time, which is OK.
+
+Syntax
+
+Following is the syntax to create a function using Function( ) 
+constructor along with the new operator.
+
+  var variablename = new Function(Arg1, Arg2..., "Function Body");
+  
+-->
+
+<script>
+	/*
+	function sum(a,b,c)
+	{
+		document.write(a+b+c);
+	}
+	sum(5,5,5);
+	*/
+	
+	var sum= new Function("a","b","c","return(a+b+c)");		
+	document.write(sum(5,8,9));
+
+</script>

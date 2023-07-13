@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let jsonData = `[
+        {
+            "id": 1,
+            "productName": "Apple",
+            "Qty": 100
+        },
+        {
+            "id": 2,
+            "productName": "Pineapple",
+            "Qty": 120
+        },
+        {
+            "id": 3,
+            "productName": "Mango",
+            "Qty": 10
+        }
+    ]`;
+		
+		// convert json to object 
+			
+        let Object = JSON.parse(jsonData)
+
+		/*
+        for(let i = 0 ; i < Object.length ; i++){
+            console.log(Object.products[i])
+        }
+		*/
+		
+        for(const myData of Object)
+		{
+            document.write(`<p>${myData.id} : ${myData.productName} , Total Quantity : ${myData.Qty}</p>`)
+        }
+		
+		
+		
+		
+		// convert object to json
+		
+		const myJSON = JSON.stringify(Object);
+		console.log(Object); // object
+		console.log(myJSON); // json
+		
+		
+        // https://jsonplaceholder.typicode.com/
+		
+		// rest api url json to object
+
+		fetch('https://jsonplaceholder.typicode.com/users')
+		  .then(response => response.json())
+		  .then(object => console.log(object))
+	  
+    </script>
+  </body>
+</html>
