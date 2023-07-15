@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        #main {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <p id="id"></p>
+        <p id="name"></p>
+
+    </div>
+    <script>
+
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then((response) => (response.json()))
+            .then((data) => {
+                let id = document.getElementById('id');
+                let name = document.getElementById('name');
+                console.log(data);
+                for (let i of data) {
+                    console.log(i);
+                    // id.innerText = data[i].id;
+                    // console.log(id);
+                    // name.innerText = data[i].name;
+                    // console.log(name);
+                }
+            })
+            .catch((e) => console.log(e))
+    </script>
+</body>
+
+</html>
