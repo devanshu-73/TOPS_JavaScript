@@ -1,0 +1,27 @@
+<div id="dev1" style="border: 1px solid black;">beforebegin</div>
+<br>
+<br>
+<br>
+<div id="dev2" style="border: 1px solid black;">afterbegin</div>
+<br>
+<br>
+<br>
+<div id="dev3" style="border: 1px solid black;">afterend</div>
+<br>
+<br>
+<br>
+<div id="dev4" style="border: 1px solid black;">beforeend</div>
+<br>
+<br>
+<br>
+<script>
+    const data1 = document.getElementById('dev1');
+    const data2 = document.getElementById('dev2');
+    const data3 = document.getElementById('dev3');
+    const data4 = document.getElementById('dev4');
+    let text = "Bc....";
+    data1.insertAdjacentHTML("beforebegin", text);
+    data2.insertAdjacentHTML("afterbegin", text);
+    data3.insertAdjacentHTML("afterend", text);
+    data4.insertAdjacentHTML("beforeend", text);
+</script>
