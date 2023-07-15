@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "fname": "dev",
+        "lname": "chauhan",
+        "pwd": 12345
+    },
+    {
+        "id": 2,
+        "fname": "deva",
+        "lname": "chauha",
+        "pwd": 1234
+    },
+    {
+        "id": 3,
+        "fname": "devan",
+        "lname": "chauh",
+        "pwd": 123
+    },
+    {
+        "id": 4,
+        "fname": "devans",
+        "lname": "chau",
+        "pwd": 12
+    },
+    {
+        "id": 5,
+        "fname": "devansh",
+        "lname": "cha",
+        "pwd": 1
+    }
+]
