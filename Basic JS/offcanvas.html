@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off Canvas</title>
+    <style>
+        /* ------------------------CSS MEDIA QUERY------------------------------------- */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            html {
+                font-size: 60%;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            html {
+                font-size: 55%;
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 480px) {
+            html {
+                font-size: 38%;
+            }
+        }
+
+        /* ----------------------------------------------------------------------------------------------------- */
+
+        /* CSS RESET */
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        /* END CSS RESET */
+        /* utility Classes */
+        .d-flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .bdr {
+            border: 1px solid black;
+        }
+
+        /*End utility Classes */
+        nav {
+            background-color: black;
+        }
+
+        .navbar-div {
+            width: 80%;
+        }
+
+        .navbar {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        #sec-1 {
+            background-color: aqua;
+            max-height: 100%;
+        }
+
+        #logo {
+            color: white;
+            max-width: 10%;
+        }
+
+        #hamburger-menu {
+            background-color: black;
+            width: 3%;
+            padding: .1rem;
+            outline: none;
+            border: 2px solid white;
+            border-radius: .2rem;
+        }
+
+        #hamburger-menu hr {
+            border-radius: 1rem;
+            height: .1rem;
+            background-color: white;
+            margin: .2rem 0rem;
+        }
+
+        #hamburger-menu:hover {
+            background-color: rgb(187, 124, 124);
+        }
+
+        .nav-hm {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-hm nav {
+            width: 100%;
+        }
+
+        .offcanvas {
+            width: 50rem;
+            background-color: lightblue;
+            height: auto;
+            /* display: none; */
+            visibility: hidden;
+            position: absolute;
+            transition:all 1s ease;
+            top: -500%;
+            /* right: -100%; */
+
+        }
+
+        .offcanvas-vis {
+            /* display: block; */
+            visibility: visible;
+            top: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="sec-1" class="bdr">
+            <div class="nav-hm">
+                <nav class="d-flex bdr">
+                    <div id="logo" class="bdr">Dev_Eloper</div>
+                    <div class="bdr  navbar-div">
+                        <ul class="d-flex navbar">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Contact US</a></li>
+                        </ul>
+                    </div>
+                    <button id="hamburger-menu" onclick="offcanvas()">
+                        <div class="bdr">
+                            <span>
+                                <hr>
+                            </span>
+                            <span>
+                                <hr>
+                            </span>
+                            <span>
+                                <hr>
+                            </span>
+                        </div>
+                    </button>
+
+                </nav>
+                <div class="offcanvas" id="offcanvas">
+                    <h1>Dev</h1>
+                    <div>grfdvrev</div>
+                    <div>grfdvrev</div>
+                    <div>grfdvrev</div>
+                    <div>grfdvrev</div>
+                    <div>grfdvrev</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function offcanvas() {
+            var x = document.getElementById("offcanvas");
+            x.classList.toggle("offcanvas-vis");
+            // if (x.style.display === "block") {
+            //     x.style.display = "none";
+            // } else {
+            //     x.style.display = "block";
+            // }
+        }
+
+    </script>
+    <!-- <script src="/offcanvas.js"></script> -->
+</body>
+
+</html>
