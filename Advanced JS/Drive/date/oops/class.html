@@ -1,0 +1,117 @@
+
+
+<!--
+var a=10;
+var b=20;
+document.write(a+b);
+
+function sum()
+{
+	var a=10;
+	var b=20;
+	document.write(a+b);
+}
+sum();
+
+-->
+
+
+<!--
+
+OOPS
+
+Object-oriented Programming treats data as a crucial element in program development and doesn't 
+allow it to flow freely around the system. It ties data more securely to the function that operates on 
+it and protects it from accidental modification from an outside function. OOP breaks down a problem 
+into several entities called objects and builds data and functions around these objects. 
+
+
+Object-oriented programming has several advantages over procedural programming:
+
+OOP is faster and easier to execute
+OOP provides a clear structure for the programs
+OOP provide securities 
+OOP code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug
+OOP makes it possible to create full reusable applications with less code and shorter development time
+Example :
+
+Objects 
+Objects are the basic run-time bodies in an object-oriented framework. 
+They may represent a place, a person, an account, a table of data, or anything that the 
+program needs to handle. Objects can also represent user-defined data such as vectors, time, and lists.
+
+Consider two objects, “customer” and “account” in a program. The customer object may send 
+a message requesting the bank balance. 
+
+Classes 
+We know that objects hold the data and the functions to manipulate the data. However, 
+the two can be bound together in a user-defined data type with the help of classes. Any number of objects can be created in a class. Each object is associated with the data of type class. A class is therefore a collection of objects of similar types. 
+
+For example, consider the class “Fruits”. We can create multiple objects for this class -
+
+
+Class ===   Fruits / car
+Object  ====  apple,banana,orange / volve audi ford
+
+oops Features : 
+
+Class : making group of data members and member function called class
+Object 
+Encapsulation
+Inheritance / Reusability    == extends 
+Access Modifier / Visibility  = public / private  / protected  
+Polymorphism / overloading / overriding
+-->
+
+
+<!--
+In JavaScript, classes are the special type of functions. 
+We can define the class just like function declarations and function expressions.
+
+The JavaScript class contains various class members within a body including 
+methods or constructor. The class is executed in strict mode. So, the code containing the silent error or mistake throws an error.
+
+The class syntax contains two components:
+
+Class declarations
+Class expressions
+
+-->
+
+
+<script>
+/*
+simple()
+	{
+		var a=10;
+		var b=20;
+		var sum;
+		sum=a+b;
+		document.write(sum);
+	}
+
+*/
+
+class abc
+{
+	sum() 
+	{
+		var a=10;
+		var b=20;
+		var sum;
+		sum=a+b;
+		document.write(sum);
+	}
+	multi()
+	{
+		var a=10;
+		var b=20;
+		var multi;
+		multi=a*b;
+		document.write(multi);
+	}
+}
+var obj=new abc;
+obj.sum();
+obj.multi();
+</script>

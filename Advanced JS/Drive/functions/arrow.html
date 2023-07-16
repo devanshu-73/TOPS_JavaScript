@@ -1,0 +1,33 @@
+<!--
+Arrow functions were introduced in ES6.
+
+Arrow functions allow us to write shorter function syntax:
+-->
+
+<script>
+
+	// simple
+	function sum(a,b)
+	{
+		document.write(a+b);
+	}
+	sum(8,7);
+	
+	//litral
+	const sum=function(x,y) 
+	{ 
+		document.write(x*y);  
+	};
+	sum(5,7);
+
+	
+	// arrow
+	var sum=()=>{
+		document.write(a+b);
+	};
+	sum(8,7);
+	
+	const sum=()=>document.write('hello');
+	
+	
+</script>

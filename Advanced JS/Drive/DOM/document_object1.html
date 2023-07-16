@@ -1,0 +1,320 @@
+
+<!--
+With the HTML DOM, JavaScript can access and change all the elements of an HTML document.
+When a web page is loaded, the browser creates a Document Object Model of the page.
+
+With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+
+What is the HTML DOM?
+The HTML DOM is a standard object model and programming interface for HTML. It defines:
+
+The HTML elements as objects
+The pProperties of all HTML elements
+The methods to access all HTML elements
+The events for all HTML elements
+In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<title>
+	Dom Object
+</title>
+
+<!--
+
+document.getElementById('test').id;
+document.getElementById('test').name;
+document.getElementById('test').value;
+document.getElementById('test').innerHTML;
+document.getElementById('test').type;
+document.getElementById('test').style;
+document.getElementById('test').images.lenghth;
+document.getElementById('test').disabled="true";
+document.getElementById('test').lenghth;
+document.getElementById('test').forms;
+document.getElementById("frm1").action;
+document.getElementById("mySelect").size = 2;
+document.getElementById("mySelect").multiple = true;
+document.getElementById("myAnchor").href;
+document.getElementById("myframe").src;
+
+
+
+Form
+
+document.getElementById("frm1").length;
+document.getElementById("frm1").method
+document.getElementById("frm1").action;
+document.getElementById("frm1").name;
+document.getElementById("frm1").target;
+
+Image
+document.getElementById("myImg").src;
+document.getElementById("myImg").alt;
+document.getElementById("myImg").height;
+document.getElementById('myimage').src = "compman.gif";
+document.getElementById("planets").useMap;
+
+Table
+document.getElementById(id).rows[0].cells;
+document.getElementById("demo").innerHTML = x[1].innerHTML;
+document.getElementById(id).createCaption().innerHTML = "My new caption";
+
+
+var x = document.getElementById(id).insertRow(0);
+  var y = x.insertCell(0);
+  var z = x.insertCell(1);
+  y.innerHTML =  yvalue 
+  z.innerHTML =  zvalue;
+
+document.getElementById('myTable').deleteRow(0)
+
+
+-->
+
+
+
+
+
+
+
+<body>
+
+<p id="demo">Click the button to display the cookies associated with this document.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML =
+  "Cookies associated with this document: " + document.cookie;
+}
+</script>
+
+<br>
+<br>
+
+<p id="demo1">Click the button to display the domain name of the server that loaded this document.</p>
+
+<button onclick="myFunction1()">Try it</button>
+
+<p id="demo1"></p>
+
+<script>
+function myFunction1() {
+  document.getElementById("demo1").innerHTML = document.domain;
+}
+</script>
+<br>
+<br>
+
+<p>This document was last modified <span id="demo2"></span>.</p>
+
+<script>
+document.getElementById("demo2").innerHTML = document.lastModified;
+</script>
+
+<br>
+<br>
+
+<p id="demo3"></p>
+
+<script>
+document.getElementById("demo3").innerHTML =
+"The title of this document is: " + document.title;
+</script>
+
+<br>
+<br>
+
+<p>The full URL of this document is: <br><span id="demo4"></span>.</p>
+
+<script>
+document.getElementById("demo4").innerHTML = document.URL
+</script>
+
+
+<br>
+<br>
+
+
+<button onclick="myFunction2()">Try it</button>
+
+<script>
+function myFunction2() {
+  document.open("text/html","replace");
+  document.write("<h2>Learning about the HTML DOM is fun!</h2>");
+  document.close();
+}
+</script>
+
+<br>
+<br>
+<br>
+
+<script>
+function getElements() {
+  var x = document.getElementsByName("x");
+  if (x[0].checked == true) 
+	{
+       document.getElementById('demo5').innerHTML = 'Cats';           
+    }
+    else if (x[1].checked == true) 
+	{
+       document.getElementById('demo5').innerHTML = 'Dogs'; 
+    }
+    else
+    {
+    	document.getElementById('demo5').innerHTML = 'Not Selected';
+    }
+}
+</script>
+</head>
+<body>
+
+<p>
+Cats: <input name="x" type="radio" value="Cats">
+Dogs: <input name="x" type="radio" value="Dogs">
+</p>
+
+<p>
+<input type="button" onclick="getElements()" value="How many elements named x?">
+</p>
+
+<p id="demo5"></p>
+
+
+<br>
+<br>
+
+<h2>Finding HTML Elements Using document.anchors</h2>
+
+<a href="falana.html" name="html">HTML Tutorial</a><br>
+<a href="#" name="css">CSS Tutorial</a><br>
+<a href="#" name="xml">XML Tutorial</a><br>
+
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<script>
+document.getElementById("demo6").innerHTML =
+"Number of anchors are: " + document.anchors[0].innerHTML;
+
+document.getElementById("demo7").innerHTML =
+"Number of links: " + document.links.length;
+
+document.getElementById("demo8").innerHTML =
+"The href of the first link is " + document.links[0].href;
+</script>
+
+
+<script>
+
+
+<!-- forms -->
+
+function getforms()
+{
+	var abc=document.forms['myform']['abc'].value;
+	document.getElementById("demo9").innerHTML ="Name is " + abc;
+	
+	var xyz=document.forms['myform']['xyz'].value;
+	document.getElementById("demo10").innerHTML ="Email is " + xyz;
+	return false;
+}
+
+
+
+</script>
+
+
+<p id="demo9"></p>
+<p id="demo10"></p>
+
+<form name="myform" action="" onsubmit="return getforms()">
+	
+	Name:<input type="text" name="abc">
+	<br>
+	<br>
+	Email:<input type="text" name="xyz">
+	<br>
+	<br>
+	<input type="submit" name="submit">
+	<br>
+	<br>
+</form>
+
+
+<!-- 
+
+images 
+
+-->
+
+
+<img id="img1"  src="pic_htmltree.gif" width="486" height="266">
+<img id="img2" src="pic_navigate.gif" width="362" height="255">
+
+<p id="demo11"></p>
+<p id="demo12"></p>
+<script>
+document.getElementById("demo11").innerHTML =document.images.length;
+document.getElementById("demo12").innerHTML =document.images[0].id;
+</script>
+
+<!-- .Style.property -->
+<script>
+function bgChange(bg) {
+  document.body.style.background = bg;
+}
+</script>
+
+
+
+<table style="width:300px;height:100px">
+  <tr>
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+    onmouseout="bgChange('transparent')"
+    style="background-color:Khaki">
+    </td>
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+    onmouseout="bgChange('transparent')"
+    style="background-color:PaleGreen">
+    </td>
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+    onmouseout="bgChange('transparent')"
+    style="background-color:Silver">
+    </td>
+  </tr>	
+</table>
+
+
+
+<!-- Buttons -->
+
+
+<form>
+<input type="button" id="btn01" value="OK">
+</form>
+<button onclick="disableElement()">Disable</button>
+
+<script>
+function disableElement() {
+  document.getElementById("btn01").disabled = true;
+}
+</script>
+
+
+</body>
+</html>
