@@ -35,13 +35,25 @@
             <h1 id="cartTitle">Add to Cart</h1>
             <div>
                 <input type="button" id="minus" value="-" onclick="minusValue()">
-                <input type="number" name="cartQuantity" id="cartQuantity" placeholder="Enter Quantity">
+                <input type="number" name="cartQuantity" id="cartQuantity" value="0" placeholder="Enter Quantity"
+                    min="0">
                 <input type="button" id="plus" value="+" onclick="plusValue()">
             </div>
         </div>
     </div>
     <script>
-        let minus = doc
+
+
+        function minusValue() {
+            let cartQuantity = document.getElementById('cartQuantity');
+            (cartQuantity.value)--;
+            cartQuantity = cartQuantity.value;
+        }
+        function plusValue() {
+            let cartQuantity = document.getElementById('cartQuantity');
+            (cartQuantity.value)++;
+            cartQuantity = cartQuantity.value;
+        }
     </script>
 </body>
 
