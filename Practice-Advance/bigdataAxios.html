@@ -22,17 +22,20 @@
         axios
             .get("https://jsonplaceholder.typicode.com/photos")
             .then(
-                (response) => (console.log(response.data), showData(response.data))
+                (response) => (showData(response.data))
             );
         function showData(data) {
             data.map((val) => {
-                body.innerHTML += `<div class="card" style = "width: 18rem;" >
+                if (`${val.id}` <= 500) {
+                    body.innerHTML += `<div class="card" style = "width: 18rem;" >
                             <div class="card-body">
-                                <h5 class="card-title">${val.title}</h5>
+                                <img src="${val.url}" class="card-img-top" alt="...">
+                                <h5 class="card-title">${val.id},${val.title}</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>`;
+                }
             });
         }
     </script>
