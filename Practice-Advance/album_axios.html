@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1px solid black">
+        <thead>
+            <th>id</th>
+            <th>userId</th>
+            <th>title</th>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        // function getData(data) {
+        //     data.map((val) => {
+        //         console.log(val.id);
+        //     })
+        // }
+        let tbody = document.getElementById('tbody');
+        function getData(data) {
+            // console.log(data);
+            data.filter((val) => (`${val.id}` <= 20)).map((val) => {
+                tbody.insertAdjacentHTML( "beforeend", `
+                <tr>
+                  <td>${val.id}</td>
+                  <td>${val.userId}</td>
+                  <td>${val.title}</td>
+                </tr>
+                  `)
+            }
+            );
+        }
+        axios.get('https://jsonplaceholder.typicode.com/albums')
+            .then(res => {
+                // console.log(res.data);
+                getData(res.data)
+            })
+            // .catch(err => {
+            //     console.error(err);
+            // })
+    </script>
+</body>
+
+</html>
