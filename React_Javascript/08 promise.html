@@ -1,0 +1,106 @@
+
+<!--
+
+JavaScript Promise Object
+A JavaScript Promise object contains both the 
+producing code and calls to the consuming code:
+
+Promise Object Properties
+A JavaScript Promise object can be:
+
+Pending
+Fulfilled
+Rejected
+
+
+Promise How To
+Here is how to use a Promise:
+
+myPromise.then(
+  function(value) { /* code if successful */ },
+  function(error) { /* code if some error */ }
+);
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  
+  
+	
+	
+    <script>
+	/*
+      let songPublish = false;
+      let lottery = new Promise(function (resolve, reject) 
+	  {
+        setTimeout(function () 
+		{
+          if (songPublish) 
+		  {
+            resolve("Yes The song has been publish");
+          } 
+		  else 
+		  {
+            reject("Song will be publish in 10 days");
+          }
+        }, 2000);
+      });
+lottery.then((response) => document.write(response)).catch((err) => document.write(err));
+*/
+    </script>
+	 <script>
+      
+      let code = new Promise(function (resolve, reject) 
+	  {
+        var marks=50;
+		if(marks>=40)
+		{
+			resolve("You are pass");
+		}
+		else
+		{
+			reject("You are fail");
+		}
+      });
+	 code.then((resp)=> document.write(resp)).catch((err)=> document.write(err)); 
+	  
+    </script>
+
+	<p id="demo"></p>
+
+	<script>
+	function myDisplayer(some) {
+	  document.getElementById("demo").innerHTML = some;
+	}
+
+	let myPromise = new Promise(function(myResolve, myReject) {
+	  let x = 0;
+
+	// some code (try to change x to 5)
+
+	  if (x == 0) {
+		myResolve("OK");
+	  } else {
+		myReject("Error");
+	  }
+	});
+
+	myPromise.then(
+	  function(value) {myDisplayer(value);},
+	  function(error) {myDisplayer(error);}
+	);
+	
+	</script>
+
+	
+	
+  </body>
+</html>

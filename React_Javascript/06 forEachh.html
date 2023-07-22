@@ -1,0 +1,63 @@
+
+<!--
+The forEach() method calls a function for each element in an array.
+
+The forEach() method is not executed for empty elements.
+
+
+for ForEach function(item,index,entire_arr)
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	
+	<p id="demo"></p>
+
+	<script>
+	/*
+	var person = ["John", "Doe", 46];
+	document.write(person[0] + "<br>");
+	document.write(person + "<br>");
+	*/
+	
+	var emp=["Sonoo","Vimal","Ratan"];  
+	for (i=0;i<emp.length;i++)
+	{  
+		document.write(emp[i] + "<br/>");  
+	}  
+	
+	/*
+	let text = "";
+	const fruits = ["apple", "orange", "cherry"];
+	fruits.forEach(myFunction);
+	function myFunction(value, index) 
+	{
+	  text += index + ": " + value + "<br>"; 
+	}
+	
+	document.getElementById("demo").innerHTML = text;
+	*/
+	
+	/*
+	let text = "";
+	const fruits = ["apple", "orange", "cherry"];
+	fruits.forEach((value,index)=>{ text+= `<h1> ${index} : ${value} </h1>`});
+	document.getElementById("demo").innerHTML = text;
+	*/
+	
+	
+	</script>
+
+
+   
+</body>
+</html>

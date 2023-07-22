@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
-        integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -24,25 +21,49 @@
         </tbody>
     </table>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         let tBody = document.getElementById('tBody');
 
         // fetch
-        fetch('/Practice-Advance/sample.json', {
-            method: 'POST',
-            body: JSON.stringify({
-                id: 12,
-                fname: "dev",
-                lname: "chauhan",
-                pwd: 12345
-            }),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            }
-        })
-            .then(response => response.json())
-            .then(data => console.log(data));
+        // fetch('/Practice-Advance/sample.json', {
+        //     method: 'POST',
+        //     body: JSON.stringify({
+        //         id: 12,
+        //         fname: "dev",
+        //         lname: "chauhan",
+        //         pwd: 12345
+        //     }),
+        //     headers: {
+        //         "Content-type": "application/json; charset=UTF-8"
+        //     }
+        // })
+        //     .then(response => response.json())
+        //     .then(data => console.log(data));
         // -------------------------------------------
+
+        // Axios
+        let object1 = {
+            id: 12,
+            fname: "dev",
+            lname: "chauhan",
+            pwd: 12345
+        }
+        // axios.get('http://127.0.0.1:5500/Practice-Advance/sample.json')
+        //     .then(res => {
+        //         console.log(res.data)
+        //     })
+        //     .catch(err => {
+        //         console.error(err);
+        //     })
+        axios.post('http://127.0.0.1:5500/Practice-Advance/sample.json', object1)
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch(err => {
+                console.error(err);
+            })
+
     </script>
 </body>
 

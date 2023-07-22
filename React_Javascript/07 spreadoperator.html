@@ -1,0 +1,73 @@
+
+<!--
+The JavaScript spread operator (...) allows us to quickly copy 
+all or part of an existing array or object into another array or object.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+	let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	let number2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+	let number3 = [...number, ...number2]; // combine object
+	document.write(number3 + "<br>");
+	
+	const numbers = [1, 2, 3, 4, 5, 6];
+	const [first, second, ...rest] = numbers;
+	
+	document.write(`${first}<br>`);
+	document.write(`${second}<br>`);
+	document.write(`${rest}<br>`);
+	
+		const myVehicle1 = {
+		  brand: 'Ford',
+		  model: 'Mustang',
+		  color: 'red'
+		}
+		const myVehicle2 = {
+		  type: 'car',
+		  year: 2021, 
+		  color: 'yellow'
+		}
+	
+		const myUpdatedVehicle = {...myVehicle1, ...myVehicle2}
+		
+		// single object
+		document.write(myUpdatedVehicle.brand +"<br>"); 
+		document.write(myUpdatedVehicle.model+"<br>");
+		document.write(myUpdatedVehicle.type+"<br>");
+		
+		// make loop for single object    FOR IN
+			
+		for (var property in myUpdatedVehicle)   // loop for object
+		{
+		  document.write(property + " : " + myUpdatedVehicle[property] + "<br>"); 
+		}
+		
+		
+		
+		//make loop arr object  by     FOR  OF
+		
+		const arr_object=[
+			{id:101,name:"Shyam Kumar",salary:40000},
+			{id:102,name:"Raj Kumar",salary:40000},
+			{id:103,name:"NIRAV Kumar",salary:40000}
+		];
+		
+		for(data of arr_object	)
+		{
+			document.write(data.id+" "+data.name+" "+data.salary + "<br>");
+		}
+    </script>
+  </body>
+</html>

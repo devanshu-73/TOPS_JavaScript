@@ -1,0 +1,87 @@
+
+<!--
+The insertAdjacentHTML() method of the Element interface 
+parses the specified text as HTML or XML and inserts the 
+resulting nodes into the DOM tree at a specified position.
+
+element.insertAdjacentHTML(position, text);
+
+div.insertAdjacentHTML(beforebegin,"<h1>Hello</h1>")
+
+Parameters
+
+"beforebegin"
+Before the element. Only valid if the element is in the DOM tree and has a parent element.
+
+"afterbegin"
+Just inside the element, before its first child.
+
+"beforeend":
+Just inside the element, after its last child.
+
+"afterend"
+After the element. Only valid if the element is in the DOM tree and has a parent element.
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  
+<!--
+  Definition and Usage
+The insertAdjacentHTML() method inserts HTML code into a specified position.
+
+Legal positions:
+
+Value	Description
+
+afterbegin	After the beginning of the element (first child)
+afterend	After the element
+beforebegin	Before the element
+beforeend	Before the end of the element (last child)
+  
+  -->
+  
+  
+
+ 
+  <div style="border:solid 2px red" id="data">Raj</div>
+
+    <script>
+	 const data = document.getElementById("data");
+	 var html="<p>My new paragraph.</p>";
+	 
+	 data.insertAdjacentHTML('afterend',html);
+	</script>
+	
+	
+   <button onclick="myFunction()">Insert</button>
+	<p>Click "Insert" to insert a paragraph after the header.</p>
+
+	<h2 id="myH2">My Header</h2>
+
+	<script>
+	function myFunction() {
+	  const h2 = document.getElementById("myH2");
+	  let html = "<p>My new paragraph.</p>";
+	  h2.insertAdjacentHTML("afterend", html);
+	}
+	</script>
+	
+	
+	
+	
+	
+	
+	
+  </body>
+</html>
