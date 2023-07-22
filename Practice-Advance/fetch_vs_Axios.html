@@ -43,12 +43,12 @@
         // -------------------------------------------
 
         // Axios
-        let object1 = {
-            id: 12,
-            fname: "dev",
-            lname: "chauhan",
-            pwd: 12345
-        }
+        // let object1 = {
+        //     id: 12,
+        //     fname: "dev",
+        //     lname: "chauhan",
+        //     pwd: 12345
+        // }
         // axios.get('http://127.0.0.1:5500/Practice-Advance/sample.json')
         //     .then(res => {
         //         console.log(res.data)
@@ -56,9 +56,14 @@
         //     .catch(err => {
         //         console.error(err);
         //     })
-        axios.post('http://127.0.0.1:5500/Practice-Advance/sample.json', object1)
+        let object1 = {
+            userId: 101,
+            id: 11,
+            title: "Devanshu..."
+        }
+        axios.post('https://jsonplaceholder.typicode.com/albums', object1)
             .then(res => {
-                console.log(res.data)
+                console.log(res)
             })
             .catch(err => {
                 console.error(err);
