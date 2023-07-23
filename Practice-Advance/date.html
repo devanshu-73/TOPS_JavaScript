@@ -1,11 +1,16 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
 <body>
 
 
-<!--
+    <!--
 
 Date()  // gmt format date
 
@@ -17,27 +22,26 @@ getHours() Get the hour (0-23)
 getMinutes() 	Get the minute (0-59)
 getSeconds() Get the second (0-59)
 -->
-<p id="dategmt"></p>
+    <p id="dategmt"></p>
 
-<p id="date"></p>
+    <p id="date"></p>
 
-<p id="time"></p>
+    <p id="time"></p>
 
-<script>
-var today = new Date();
-document.getElementById("dategmt").innerHTML = today;
-
-
-var date = (today.getDate())+'-'+ (today.getMonth()+1) +'-'+(today.getFullYear());
-document.getElementById("date").innerHTML = date;
+    <script>
+        var today = new Date();
+        document.getElementById("dategmt").innerHTML = today;
 
 
-var time = (today.getHours()) + ":" + today.getMinutes() + ":" + today.getSeconds();
-document.getElementById("time").innerHTML = time;
+        var date = (today.getDate()) + '-' + (today.getMonth() + 1) + '-' + (today.getFullYear());
+        document.getElementById("date").innerHTML = date;
 
-</script>
+
+        var time = (today.getHours()) + ":" + today.getMinutes() + ":" + today.getSeconds();
+        document.getElementById("time").innerHTML = time;
+
+    </script>
 
 </body>
+
 </html>
-
-
