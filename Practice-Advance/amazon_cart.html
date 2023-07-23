@@ -13,7 +13,6 @@
 <body>
     <div id="main" class="container" style="border: 1px solid black;">
         <div class="row" id="row">
-
         </div>
     </div>
     <script>
@@ -21,18 +20,16 @@
 
         function showData(data) {
             data.map((val) => {
-                row.insertAdjacentHTML ("beforeend",
-                    `<div class="col-3">
-                        <div class="card " style = "width: 18rem;" >
-                            <img src="${val.image}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">${val.title}</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                        </div> 
+                row.insertAdjacentHTML("beforeend",
+                    `<div class="card " style = "width:18rem;" >
+                            <img src="${val.image}" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${val.title}</h5>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                     </div>`
-            )})
+                )
+            })
         }
 
         axios.get("https://fakestoreapi.com/products")
