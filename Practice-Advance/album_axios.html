@@ -29,9 +29,8 @@
         // }
         let tbody = document.getElementById('tbody');
         function getData(data) {
-            // console.log(data);
             data.filter((val) => (`${val.id}` <= 20)).map((val) => {
-                tbody.insertAdjacentHTML( "beforeend", `
+                tbody.insertAdjacentHTML("beforeend", `
                 <tr>
                   <td>${val.id}</td>
                   <td>${val.userId}</td>
@@ -46,9 +45,9 @@
                 // console.log(res.data);
                 getData(res.data)
             })
-            // .catch(err => {
-            //     console.error(err);
-            // })
+            .catch(err => {
+                console.error(err);
+            })
     </script>
 </body>
 
