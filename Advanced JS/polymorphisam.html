@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // overloading :we can use same function in class.....(not possible)
+        // overriding : we can use same function but in parent and child class.....(possible)
+        class abc {
+            constructor(a, b) {
+                this.a = a;
+                this.b = b;
+            }
+            console_log() {
+                console.log(this.a + this.b);
+            }
+        }
+
+        class xyz extends abc {
+            constructor(a, b) {
+                super(a, b);
+            }
+            console_log() {
+                console.log(this.a * this.b);
+            }
+        }
+        class pqr extends xyz {
+            constructor(a, b) {
+                super(a, b);
+            }
+            console_log() {
+                console.log(this.a / this.b);
+            }
+        }
+        var obj = [new abc(5, 6), new xyz(6, 5), new pqr(6, 6)];
+
+
+        obj.forEach((msg) => (msg.console_log()));
+        // obj[0].console_log(5, 6);
+        // obj[1].console_log();
+        // obj[2].console_log();
+    </script>
+</body>
+
+</html>
