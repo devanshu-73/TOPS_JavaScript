@@ -1,0 +1,79 @@
+<!--
+
+There are 3 ways to construct array in JavaScript
+
+By array literal
+By creating instance of Array directly (using new keyword)
+By using an Array constructor (using new keyword)
+
+JavaScript arrays are used to store multiple values in a single variable.
+An array is a special variable, which can hold more than one value at a time.
+
+var car1 = "Saab";
+var car2 = "Volvo";
+var car3 = "BMW";
+
+var cars=["Saab","Volvo","BMW"];
+
+Access the Elements of an Array
+You access an array element by referring to the index number.
+var name = cars[0];
+-->
+
+<script>
+var cars = ["Saab", "Volvo", "BMW"];
+document.write(cars);
+</script>
+
+<p id="demo"></p>
+<script>
+var person = ["John", "Doe", 46];
+document.write(person[0] + "<br>");
+document.write(person + "<br>");
+</script>
+
+<script>
+	var emp=["Sonoo","Vimal","Ratan"];  
+	
+	for (i=0;i<emp.length;i++)
+	{  
+	document.write(emp[i] + "<br/>");  
+	}  
+	
+	
+	
+	var emp=new Array("Jai","Vijay","Smith");  
+	
+	for (i=0;i<emp.length;i++)
+	{  
+	document.write(emp[i] + "<br>");  
+	}  
+		
+</script>
+
+
+<!-- DS => Array , Object  -->
+    <script>
+        let listarr = ["Krupa" , "Varun" , "krishna" , "Alfiya"]
+        document.write(listarr + '<br>')	
+		
+		// add's an element in last
+        listarr.push("Karan")
+        document.write(listarr + '<br>')
+        
+		// to remove an element from last use pop
+        listarr.pop()
+        document.write(listarr + '<br>')
+        
+		
+		// to add an element from first
+        listarr.unshift("karan")
+        document.write(listarr + '<br>')
+
+        // to remove an element from first
+        listarr.shift()
+        document.write(listarr + '<br>')
+    </script>
+
+
+

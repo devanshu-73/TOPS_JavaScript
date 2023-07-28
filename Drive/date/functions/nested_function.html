@@ -1,0 +1,30 @@
+<!-- JavaScript - Nested Functions -->
+
+
+<script>
+function one(a, b) 
+{
+   function square(x) 
+   { 
+	return x*x; 
+   }
+   document.write(square(2) + "<br>")
+   
+   return a+b;
+}
+
+document.write(one(3, 4)) 
+
+
+/*
+function second() 
+{
+   var result;
+   result = one(1,2);
+   document.write (result);
+}
+
+second();
+*/
+
+</script>

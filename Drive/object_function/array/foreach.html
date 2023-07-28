@@ -1,0 +1,51 @@
+<p id="demo"></p>
+
+<script>
+let students = ['John', 'Sara', 'Jack'];
+
+document.write('<h1>' + students + '</h1>');
+document.write(students[1]);
+
+
+
+// loop by for
+var emp=["Sonoo","Vimal","Ratan"];  
+for (i=0;i<emp.length;i++)
+{  
+document.write(emp[i] + "<br/>");  
+}  
+
+
+// using forEach for array loop 	
+students.forEach((value,index)=>{ document.write(`<h1>${value} : ${index}</h1>`)});
+
+
+
+// using map for array loop 	
+students.map((value,index)=>{ document.write(`<h1>${value} : ${index}</h1>`)});
+
+
+
+//The JavaScript array every() method checks whether all the given elements in an array are satisfying the provided condition
+var marks=[50,40,45,37,20];  
+  
+function check(value)  
+{  
+  return value>10;  //return false, as marks[4]=20  
+}  
+document.writeln(marks.every(check) + "</br>");  
+
+
+
+
+//It returns the newly created array iterator object. The iterator object represents each element of the array with keys assigned to them.
+
+
+var arr=['John','Michael','Embrose','Herry','Lewis'];  
+var itr=arr.entries();  
+for(var e of itr) //for loop using var.  
+{  
+	document.write(e+"</br>");  
+}  
+
+</script>

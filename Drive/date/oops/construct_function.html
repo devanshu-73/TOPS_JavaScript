@@ -1,0 +1,57 @@
+<script>
+
+/*
+function simple(marks)
+{
+	document.write("My marks is : " + marks)
+}
+simple(78)
+*/
+
+// Constructor function for Person objects
+
+/*
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  document.write(first)
+}
+// Create a Person object
+const myFather = new Person("John", "Doe", 50, "blue");
+document.write(myFather.firstName);
+*/
+
+class abc
+{
+	constructor(a,b)
+	{
+		this.a=a;
+		this.b=b;
+	}
+	sum()
+	{
+		document.write(`sum of a & b are ${this.a+this.b} <br>`);
+	}
+	multi()
+	{
+		document.write(`Multi of a & b are ${this.a*this.b} <br>` );
+	}
+	sub()
+	{
+		document.write(`Multi of a & b are ${this.a-this.b} <br>` );
+	}
+	div()
+	{
+		document.write(`Multi of a & b are ${this.a/this.b} <br>` );
+	}
+}
+const obj= new abc(5,7);
+obj.sum();
+obj.multi();
+obj.sub();
+obj.div();
+
+
+</script>
