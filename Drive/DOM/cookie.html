@@ -46,34 +46,34 @@ If you do this, you will also have to use the corresponding unescape() function 
 -->
 
 <html>
-   <head>   
-      <script type = "text/javascript">
-         <!--
-            function WriteCookie() 
-			{
-               if(document.myform.customer.value == "" ) 
-			   {
-                  alert("Enter some value!");
-                  return;
-               }
-							//Escape characters in JavaScript
-               cookievalue = escape(document.myform.customer.value) + ";";
-               document.cookie = "name=" + cookievalue;
-               document.write ("Setting Cookies : " + "name=" + cookievalue );
-            }
-			
-         //-->
-      </script>      
-   </head>
-   
-   <body>      
-      <form name = "myform" action = "">
-         Enter name: <input type = "text" name = "customer"/>
-         <input type = "button" value = "Set Cookie" onclick = "WriteCookie();"/>
-		 
-      </form>   
-   </body>
+
+<head>
+   <meta charset="utf-8">
+   <script type="text/javascript">
+
+         //    function WriteCookie() 
+			// {
+         //       if(document.myform.customer.value == "" )
+			//    {
+         //          alert("Enter some value!");
+         //          return;
+         //       }
+			// 				//Escape characters in JavaScript
+         //       cookievalue = escape(document.myform.customer.value) + ";";
+         //       document.cookie = "name=" + cookievalue;
+         //       document.write ("Setting Cookies : " + "name=" + cookievalue );
+         //    }
+
+
+   </script>
+</head>
+
+<body>
+   <form name="myform" action="">
+      Enter name: <input type="text" name="customer" />
+      <input type="button" value="Set Cookie" onclick="WriteCookie();" />
+
+   </form>
+</body>
+
 </html>
-
-
-
