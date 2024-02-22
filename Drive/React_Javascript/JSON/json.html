@@ -37,24 +37,24 @@
 			
         let Object = JSON.parse(jsonData)
 
-		/*
-        for(let i = 0 ; i < Object.products.length ; i++){
-            console.log(Object.products[i])
-        }
-		*/
-		
+        // convert object to json
+        
+        const myJSON = JSON.stringify(Object);
+        console.log(Object); // object
+        console.log(myJSON); // json
+        
+        
         for(const myData of Object.products)
 		{
             document.write(`<p>${myData.id} : ${myData.productName} , Total Quantity : ${myData.Qty}</p>`)
         }
 		
-		
-		// convert object to json
-		
-		const myJSON = JSON.stringify(Object);
-		console.log(Object); // object
-		console.log(myJSON); // json
-		
+        /*
+        for(let i = 0 ; i < Object.products.length ; i++){
+            console.log(Object.products[i])
+        }
+        */
+        
 		
       
     </script>
